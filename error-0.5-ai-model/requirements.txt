@@ -1,0 +1,19 @@
+# Requirements for Error 0.5 AI Model Experiment
+
+# Core dependencies
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+pyyaml>=6.0
+
+# OpenAI API (optional, uncomment if using OpenAI)
+# openai>=1.0.0
+
+# Local LLM support (optional, uncomment if using local models)
+# transformers>=4.30.0
+# torch>=2.0.0
+# accelerate>=0.20.0
+
+# Jupyter notebook support (optional)
+# jupyter>=1.0.0
+# ipykernel>=6.0.0
