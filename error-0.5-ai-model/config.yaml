@@ -1,0 +1,48 @@
+# Configuration for Error 0.5 AI Model Experiment
+
+# LLM Provider Settings
+llm:
+  # Choose: "openai" or "local"
+  provider: "openai"
+  
+  # OpenAI settings
+  openai:
+    api_key: "${OPENAI_API_KEY}"  # Use environment variable or paste key here
+    model: "gpt-3.5-turbo"
+    max_tokens: 512
+  
+  # Local model settings (transformers)
+  local:
+    model_name: "microsoft/phi-2"
+    device: "cuda"  # or "cpu"
+    max_length: 512
+
+# Generation Parameters
+generation:
+  temperature: 0.7
+  top_p: 0.9
+  top_k: 50
+  system_prompt: "You are a helpful assistant. Answer concisely and accurately."
+  
+# Experiment Settings
+experiment:
+  default_repetitions: 100
+  noise_filter_enabled: true
+  noise_filter_keywords: ["I don't know", "unknown", "cannot answer"]
+  
+# Metrics Settings
+metrics:
+  # Quality threshold for D_lack calculation
+  quality_threshold: 0.8
+  
+  # Hypothesis parameters for Ω_0.5
+  p_gain: 1.0    # Probability weight for gain
+  b_value: 1.0   # Benefit multiplier
+  p_loss: 0.5    # Probability weight for loss
+  l_value: 0.5   # Loss multiplier
+
+# Output Settings
+output:
+  save_csv: true
+  save_json: true
+  results_dir: "results"
