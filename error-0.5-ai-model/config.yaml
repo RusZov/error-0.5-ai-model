@@ -24,23 +24,30 @@ generation:
   top_k: 50
   system_prompt: "You are a helpful assistant. Answer concisely and accurately."
   
+# Theory Settings (from Barkalov V.V. research)
+theory:
+  enabled: true
+  source_file: "docs/theory_full.md"
+  use_as_system_prompt: false
+  use_as_context: true
+  
 # Experiment Settings
 experiment:
   default_repetitions: 100
   noise_filter_enabled: true
-  noise_filter_keywords: ["I don't know", "unknown", "cannot answer"]
+  noise_filter_keywords: ["I don't know", "unknown", "cannot answer", "не знаю", "не могу", "извините"]
   
 # Metrics Settings
 metrics:
   # Quality threshold for D_lack calculation
   quality_threshold: 0.8
   
-  # Hypothesis parameters for Ω_0.5
+  # Hypothesis parameters for Ω_0.5 (Error 0.5 index)
   p_gain: 1.0    # Probability weight for gain
   b_value: 1.0   # Benefit multiplier
   p_loss: 0.5    # Probability weight for loss
   l_value: 0.5   # Loss multiplier
-
+  
 # Output Settings
 output:
   save_csv: true

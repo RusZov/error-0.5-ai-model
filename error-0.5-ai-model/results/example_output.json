@@ -1,0 +1,75 @@
+{
+  "timestamp": "20240101_120000",
+  "configuration": {
+    "n_repetitions": 10,
+    "temperature": 0.7,
+    "top_p": 0.9,
+    "top_k": 50,
+    "system_prompt": "You are a helpful assistant. Answer concisely and accurately.",
+    "normalize_method": "keyword"
+  },
+  "summary": [
+    {
+      "prompt_id": 0,
+      "prompt": "What is 2+2?",
+      "n_responses": 10,
+      "k_rep": 0.8,
+      "k_div": 0.2,
+      "entropy": 0.72,
+      "d_lack": 0.1,
+      "omega_05": 0.65,
+      "n_categories": 2
+    },
+    {
+      "prompt_id": 1,
+      "prompt": "Is the sky blue?",
+      "n_responses": 10,
+      "k_rep": 0.9,
+      "k_div": 0.1,
+      "entropy": 0.47,
+      "d_lack": 0.0,
+      "omega_05": 0.75,
+      "n_categories": 2
+    }
+  ],
+  "prompts": [
+    {
+      "prompt_id": 0,
+      "prompt": "What is 2+2?",
+      "n_repetitions": 10,
+      "actual_responses": 10,
+      "metrics": {
+        "k_rep": 0.8,
+        "k_div": 0.2,
+        "entropy": 0.72,
+        "d_lack": 0.1,
+        "omega_05": 0.65,
+        "n_responses": 10,
+        "n_categories": 2,
+        "frequencies": {
+          "informative": 0.8,
+          "uncertain": 0.2
+        }
+      }
+    },
+    {
+      "prompt_id": 1,
+      "prompt": "Is the sky blue?",
+      "n_repetitions": 10,
+      "actual_responses": 10,
+      "metrics": {
+        "k_rep": 0.9,
+        "k_div": 0.1,
+        "entropy": 0.47,
+        "d_lack": 0.0,
+        "omega_05": 0.75,
+        "n_responses": 10,
+        "n_categories": 2,
+        "frequencies": {
+          "affirmative": 0.9,
+          "informative": 0.1
+        }
+      }
+    }
+  ]
+}
